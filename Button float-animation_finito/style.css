@@ -1,0 +1,125 @@
+@-webkit-keyframes come-in {
+    0% {
+    -webkit-transform: translatey(100px);
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    30% {
+    -webkit-transform: translateX(-50px) scale(0.4);
+        transform: translateX(-50px) scale(0.4);
+    }
+    70% {
+    -webkit-transform: translateX(0px) scale(1.2);
+        transform: translateX(0px) scale(1.2);
+    }
+    100% {
+    -webkit-transform: translatey(0px) scale(1);
+        transform: translatey(0px) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes come-in {
+    0% {
+    -webkit-transform: translatey(100px);
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    30% {
+    -webkit-transform: translateX(-50px) scale(0.4);
+        transform: translateX(-50px) scale(0.4);
+    }
+    70% {
+    -webkit-transform: translateX(0px) scale(1.2);
+        transform: translateX(0px) scale(1.2);
+    }
+    100% {
+    -webkit-transform: translatey(0px) scale(1);
+        transform: translatey(0px) scale(1);
+        opacity: 1;
+    }
+}
+  
+.floating-container {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    margin: 35px 10px;
+    z-index: 999;
+}
+.floating-container:hover {
+    height: 225px;
+}
+.floating-container:hover .floating-button {
+    color: #fa820d;
+    box-shadow: 0 10px 25px #fa820d;
+    -webkit-transform: translatey(5px);
+    transform: translatey(5px);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.floating-container:hover .element-container .float-element.first {
+    -webkit-animation: come-in 0.4s forwards 0.2s;
+    animation: come-in 0.4s forwards 0.2s;
+}
+.floating-container:hover .element-container .float-element.second {
+    -webkit-animation: come-in 0.4s forwards 0.4s;
+    animation: come-in 0.4s forwards 0.4s;
+}
+.floating-container:hover .element-container .float-element.third {
+    -webkit-animation: come-in 0.4s forwards 0.6s;
+    animation: come-in 0.4s forwards 0.6s;
+}
+.floating-container .floating-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #592E98;
+    bottom: 0;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    line-height: 48px;
+    text-align: center;
+    font-size: 23px;
+    z-index: 100;
+    box-shadow: 0 10px 25px -5px #fa820d;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.floating-container .float-element {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 15px auto;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    line-height: 38px;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+}
+.floating-container .float-element .material-icons {
+    vertical-align: middle;
+    font-size: 16px;
+}
+.floating-container .float-element.first {
+    background: #FF9800;
+    box-shadow: 0 20px 20px -10px #592E98;
+}
+.floating-container .float-element.second {
+    background: #592E98;
+    box-shadow: 0 20px 20px -10px #fa820d;
+}
+.floating-container .float-element.third {
+    background: #FF9800;
+    box-shadow: 0 20px 20px -10px #592E98;
+}

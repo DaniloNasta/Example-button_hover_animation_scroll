@@ -1,0 +1,35 @@
+.btn-container{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+  
+.btn-container .btn-layer{
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    background-image: linear-gradient(135deg,#F83A26, #FFC344,#F83A26, #FFC344);
+    transition: all 0.4s ease;
+    border-radius: 25PX;
+}
+  
+.btn-container:hover .btn-layer{
+    left: 0;
+}
+  
+.btn-container .btn-custom{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
